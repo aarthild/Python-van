@@ -1,5 +1,5 @@
 # cook your dish here
-for I in range(int(input())):
+for i in range(int(input())):
     a,b,c=map(int,input().split())
     f=-1
     while(a):
