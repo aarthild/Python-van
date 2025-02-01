@@ -1,10 +1,10 @@
-T = int(input())
-for t in range(T):
-    n = int(input()) # the input has no use in out code
-    s = list(map(int, input().split()))
-    d = list(map(int, input().split()))
-    count = 0
-    for (i,j) in zip(s,d): # I used zip func for pairing. we can use value n also
-        if i == j:
-            count += 1
-    print(count)
+# cook your dish here
+for i in range(int(input())):
+    n = int(input())
+    arrs = list(map(int,input().split()))
+    arrd = list(map(int,input().split()))
+    e = 0
+    for i in range(n):
+        if arrs[i]==arrd[i]:
+            e+=1
+    print(e)
