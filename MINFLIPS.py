@@ -1,7 +1,13 @@
 # cook your dish here
+
 t = int(input())
-for i in range(t):
+
+for _ in range(t):
     n = int(input())
-    a = [int(i) for i in input().split()]
-    if n&1==1: print(-1)
-    else: print(abs(sum(a))//2)
+    a = list(map(int, input().split()))
+    t_sum = sum(a)
+    
+    if n % 2 == 0:
+        print(abs(t_sum) // 2)
+    else:
+        print("-1")
