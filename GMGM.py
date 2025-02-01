@@ -1,17 +1,19 @@
-for _ in range(int(input())):
-    n,d=map(int,input().split())
-    a=list(map(int,input().split()))
-    c=0
-    flag=0 # 0 vala short , 1 vala long
-    for i in a:
-        if i<=d:
-            if flag!=0:
-                c+=1
-            flag=0
-        else:
-            if flag!=1:
-                c+=1
-            flag=1
-    print(c)
+# cook your dish here
+
+J = int(input())
+
+
+for _ in range(J):
+    N,D = map(int,input().split())
+    B = list(map(int, input().split()))
     
-        
+    switches = 0
+    holding_close_range_gun = True
+    for i in range(N):
+        if holding_close_range_gun and B[i] > D:
+             switches += 1
+             holding_close_range_gun = False
+        elif not holding_close_range_gun and B[i] <= D:
+            switches += 1
+            holding_close_range_gun = True
+    print(switches)        
