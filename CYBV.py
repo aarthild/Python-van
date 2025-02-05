@@ -1,7 +1,5 @@
-
-# cook your dish here
-t=int(input())
-for i in range(t):
-    n,k=(map(int,input().split()))
-    x=k//n
-    print(x)
+from math import ceil
+for _ in range(int(input())):
+    M, N = map(int, input().split())
+    
+    print(N // M)
